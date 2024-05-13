@@ -1,5 +1,5 @@
 //one specific part of our state of a global state
-import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query";
+import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 const rapidApiKey = import.meta.env.VITE_RAPID__API_ARTICLE_KEY;
 export const articleApi = createApi({
   reducerPath: "articleApi", // reducer path
@@ -11,7 +11,7 @@ export const articleApi = createApi({
         return headers;
     }
   }),
-  endpoints: (builder) => ({    // bulder allows us to build those endpoints
+  endpoints: (builder) => ({    // builder allows us to build those endpoints
     getSummary: builder.query({
       query: (params) => `/summarize?url=${encodeURIComponent(params.articleUrl)}&length=3`,
     }),

@@ -1,5 +1,6 @@
 import { logo } from "../assets";
 const Hero = () => {
+  console.log(" HERO")
   return (
     <header className="w-full flex flex-col justify-center items-center">
       <nav className="w-full flex p-2 justify-between items-center mb-6 pt-4">
